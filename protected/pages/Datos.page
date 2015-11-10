@@ -1,0 +1,77 @@
+<%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
+<com:TContent ID="Main">
+	<div align="center">
+		<table width="100%" border="0">
+			<tr><td width="30%"></td><td width="70%"></td></tr>
+			<tr>
+				<td colspan="2" align="center">Datos personales<br /><br /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><com:TImage ID="imgFoto" /></td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Nombre:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtNombre" MaxLength="300" Width="400px" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtNombre" 
+							ErrorMessage="Escriba su nombre" Text="*" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Domicilio:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtDomicilio" MaxLength="500" Width="400px" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtDomicilio" 
+							ErrorMessage="Escriba su domicilio" Text="*" />
+				</td>
+
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Teléfono fijo:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtTelefono" MaxLength="20" Width="400px" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtTelefono" 
+							ErrorMessage="Escriba su número telefónico fijo" Text="*" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Teléfono móvil:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtMovil" MaxLength="20" Width="400px" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtMovil" 
+							ErrorMessage="Escriba su número telefónico móvil" Text="*" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Correo:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtCorreo" MaxLength="250" Width="400px" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtCorreo" 
+							ErrorMessage="Escriba su correo electrónico" Text="*" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Fecha de nacimiento:</td>
+				<td colspan="1"><com:TDatePicker ID="datNacimiento" InputMode="DropDownList" FromYear="1960" /></td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Sugerencias de regalo:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtSugerencia" TextMode="MultiLine" Width="400" CausesValidation="False" />
+					<com:TRequiredFieldValidator ControlToValidate="txtSugerencia" 
+							ErrorMessage="Escriba sus sugerencias de regalo" Text="*" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Foto:</td>
+				<td colspan="1">
+					<com:TFileUpload ID="uplFoto" OnFileUpload="fileUploaded" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><com:TButton ID="btnGuardar" Text="Actualizar" OnClick="btnGuardar_Click" /></td>
+			</tr>
+		</table>
+	</div>
+	<com:TValidationSummary ShowSummary="False" ShowMessageBox="True" />
+</com:TContent>
