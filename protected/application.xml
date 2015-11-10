@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="interc" mode="Debug">
+	<modules>
+		<module class="System.Data.TDataSourceConfig" id="db">
+			<database ConnectionString="mysql:host=localhost;dbname=u417630768_inter" username="u417630768_inter" password="regalos" charset="UTF8" />
+		</module>
+		<module class="System.I18N.TGlobalization" DefaultCharset="utf-8" />
+		<module class="System.Data.ActiveRecord.TActiveRecordConfig" EnableCache="true" ConnectionID="db" />
+	</modules>
+</application>
