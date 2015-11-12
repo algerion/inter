@@ -1,4 +1,11 @@
 <%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
+<com:TContent ID="Cabeceras">
+	<com:TClientScript ID="cscrCodigo">
+		function codigo()
+		{
+		}
+	</com:TClientScript>
+</com:TContent>
 <com:TContent ID="Main">
 	<div align="center">
 		<table width="100%" border="0">

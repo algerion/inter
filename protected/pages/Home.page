@@ -1,5 +1,15 @@
 <%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
+<com:TContent ID="Cabeceras">
+	<com:TClientScript ID="cscrCodigo">
+		function codigo()
+		{
+			var request = <%= $this->cbCodigo->ActiveControl->Javascript %>;
+			request.dispatch();
+		}
+	</com:TClientScript>
+</com:TContent>
 <com:TContent ID="Main">
+	<com:TCallback ID="cbCodigo" OnCallback="cbCodigo_Callback" ActiveControl.CausesValidation="false" />
 	<div align="center">
 		<table width="100%" border="0">
 			<tr><td width="30%"></td><td width="70%"></td></tr>
@@ -72,6 +82,6 @@
 			</tr>
 		</table>
 	</div>
-	<com:TActiveTextBox ID="hidFacebook"  OnTextChanged="hidCodigo_Change" AutoPostBack="true" Display="Hidden" />
+	<com:TActiveHiddenField ID="hidFacebook" />
 	<com:TValidationSummary ShowSummary="False" ShowMessageBox="True" />
 </com:TContent>

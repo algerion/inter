@@ -24,7 +24,6 @@ window.fbAsyncInit = function() {
 		xfbml      : true,
 		version    : 'v2.5'
 	});
-
 	FB.getLoginStatus(function(response) {
 		statusChangeCallback(response);
 	  });
@@ -44,7 +43,7 @@ function testAPI() {
 		console.log(JSON.stringify(response));
 //		document.getElementById('ctl0_Main_txtNombre').value = response.name;
 		document.getElementById('ctl0_Main_hidFacebook').value = response.id;
-		
+		codigo();
 //	alert(document.getElementById("ctl0_Main_hidFacebook").value);
 /*		if(response.email != undefined)
 			document.getElementById('ctl0_Main_txtCorreo').value = response.email;

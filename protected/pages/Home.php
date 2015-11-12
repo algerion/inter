@@ -12,19 +12,19 @@ class Home extends TPage
 		parent::onLoad($param);
 
 		$this->cn = new DbCon($this, "db");
-		$this->codigo = $this->hidFacebook->Text; //mt_rand();
+		//$this->codigo = $this->hidFacebook->Text; //mt_rand();
 	}
 	
-	public function hidCodigo_Change($sender, $param)
+	public function cbCodigo_Callback($sender, $param)
 	{
-		$this->codigo = $this->hidFacebook->Text; //mt_rand();
+		$this->codigo = $this->hidFacebook->Value;
 		if($this->codigo != "")
 		{
 			$consulta = "SELECT id_persona FROM datos WHERE codigo = :codigo";
 			$parametros = array("codigo"=>$this->codigo);
 			$result = $this->cn->consulta($consulta, $parametros);
 			if(count($result) > 0)
-				$this->Response->redirect("index.php?page=Datos&codigo=" . $this->codigo);
+				$this->Response->redirect("index.php?page=Datos&amp;codigo=" . $this->codigo);
 		}
 	}
 	
