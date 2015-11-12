@@ -1,0 +1,12 @@
+<%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
+<com:TContent ID="Cabeceras">
+	<link rel="stylesheet" href="../compartidos/css/ajusteimg.css" media="all" />
+	<com:TClientScript ID="cscrCodigo">
+		function codigo()
+		{
+		}
+	</com:TClientScript>
+</com:TContent>
+<com:TContent ID="Main">
+	<com:TDataGrid ID="dgTodas" GridLines="Both"/>
+</com:TContent>
