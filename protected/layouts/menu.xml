@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Menu ID="mnuPrincipal">
+	<MenuItem ID="smCaptura" Title="Captura" Url="index.php" Description="Captura" IdPag="" />
+	<MenuItem ID="smConsulta" Title="Consulta" Url="index.php?page=Todas" Description="Consulta" IdPag="" />
+</Menu>
