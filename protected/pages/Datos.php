@@ -11,9 +11,9 @@ class Datos extends TPage
 
 		$this->cn = new DbCon($this, "db");
 
+		$this->codigo = $this->Request["codigo"];
 		if(!$this->IsPostBack)
 		{
-			$this->codigo = $this->Request["codigo"];
 			$consulta = "SELECT * FROM datos WHERE codigo = :codigo";
 			$parametros = array("codigo"=>$this->codigo);
 			$result = $this->cn->consulta($consulta, $parametros);
@@ -56,7 +56,7 @@ class Datos extends TPage
 			"nacimiento"=>date("Y-m-d", $this->datNacimiento->Timestamp),
 			"sugerencias"=>$this->txtSugerencia->Text
 		);
-        if($sender->HasFile)
+        if($this->uplFoto->HasFile)
 		$parametros = array_merge(
 			$parametros,
 			array("foto"=>$this->uplFoto->FileName)

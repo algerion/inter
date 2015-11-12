@@ -1,5 +1,6 @@
 <%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
 <com:TContent ID="Cabeceras">
+	<link href="../compartidos/css/ajusteimg.css" />
 	<com:TClientScript ID="cscrCodigo">
 		function codigo()
 		{
@@ -14,7 +15,7 @@
 				<td colspan="2" align="center">Datos personales<br /><br /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><com:TImage ID="imgFoto" /></td>
+				<td colspan="2" align="center"><com:TImage ID="imgFoto" CssClass="ajusteimg" /></td>
 			</tr>
 			<tr>
 				<td colspan="1" align="Right">Nombre:</td>
