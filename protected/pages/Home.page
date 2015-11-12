@@ -17,6 +17,10 @@
 				<td colspan="2" align="center">Capturar datos personales<br /><br /></td>
 			</tr>
 			<tr>
+				<td colspan="1" align="Right">Código:</td>
+				<td colspan="1"><com:TActiveTextBox ID="txtFacebook" /></td>
+			</tr>
+			<tr>
 				<td colspan="1" align="Right">Nombre:</td>
 				<td colspan="1">
 					<com:TTextBox ID="txtNombre" MaxLength="300" Width="400px" CausesValidation="False" />
