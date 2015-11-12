@@ -1,0 +1,4 @@
+<%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
+<com:TContent ID="Main">
+	Código: <com:TTextBox ID="hidFacebook" ReadOnly="True"/>
+</com:TContent>
