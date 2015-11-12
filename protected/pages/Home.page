@@ -16,7 +16,7 @@
 			<tr>
 				<td colspan="2" align="center">Capturar datos personales<br /><br /></td>
 			</tr>
-			<tr>
+			<tr style="visibility: hidden">
 				<td colspan="1" align="Right">Código:</td>
 				<td colspan="1"><com:TActiveTextBox ID="txtFacebook" /></td>
 			</tr>
