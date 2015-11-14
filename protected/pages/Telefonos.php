@@ -11,7 +11,7 @@ class Telefonos extends TPage
 
 		$this->cn = new DbCon($this, "db");
 
-		$consulta = "SELECT nombre, movil FROM datos";
+		$consulta = "SELECT nombre, /*CONCAT('<a target=\"inter\" href=\"index.php?page=Datos&codigo=', codigo, '\">' , codigo, \"</a>\") AS codigo,*/ movil FROM datos ORDER BY movil";
 		$result = $this->cn->consulta($consulta);
 		$this->dgTodas->DataSource = $result;
 		$this->dgTodas->dataBind();
