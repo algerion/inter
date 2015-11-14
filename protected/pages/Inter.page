@@ -4,12 +4,18 @@
 	<com:TClientScript ID="cscrCodigo">
 		function codigo()
 		{
-			var request = <%= $this->cbCodigo->ActiveControl->Javascript %>;
-			request.dispatch();
 		}
 	</com:TClientScript>
 </com:TContent>
 <com:TContent ID="Main">
-	<com:TCallback ID="cbCodigo" OnCallback="cbCodigo_Callback" ActiveControl.CausesValidation="false" />
-	<com:TActiveHiddenField ID="hidFacebook" />
+	<div align="center">
+		<br/><br/>
+		Mi regalo es para:
+		<br/><br/>
+		<com:TDataGrid ID="dgEntregar" GridLines="Both"/>
+		<br/><br/>
+		Recibo regalo de:
+		<br/><br/>
+		<com:TDataGrid ID="dgRecibir" GridLines="Both"/>
+	</div>
 </com:TContent>
