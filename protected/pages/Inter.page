@@ -37,11 +37,11 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" align="Right">Foto actual del regalo:</td>
+				<td colspan="2" align="Center">Foto actual del regalo:</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<com:TImage ID="imgFoto" />
+				<td colspan="2" align="Center">
+					<com:TImage ID="imgFoto"  CssClass="ajusteimg" />
 				</td>
 			</tr>
 			<tr>

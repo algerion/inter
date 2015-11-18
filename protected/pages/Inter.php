@@ -15,13 +15,15 @@ class Inter extends TPage
 
 		$this->codigo = $this->Request["codigo"];
 		
-		$consulta = "SELECT id_persona FROM datos WHERE codigo = :codigo";
+		$consulta = "SELECT cod_rastreo, regalo FROM datos WHERE codigo = :codigo";
 		$parametros = array("codigo"=>$this->codigo);
 		$result = $this->cn->consulta($consulta, $parametros);
 		if(count($result) > 0)
 		{
 			$this->grids(">");
 			$this->grids("<");
+			$this->txtRastreo->Text = $result[0]["cod_rastreo"];
+			$this->imgFoto->ImageUrl = "regalos/" . $this->codigo . $result[0]["regalo"];
 		}
 	}
 	
