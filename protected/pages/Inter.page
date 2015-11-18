@@ -2,8 +2,9 @@
 <com:TContent ID="Cabeceras">
 	<link rel="stylesheet" href="../compartidos/css/ajusteimg.css" media="all" />
 	<com:TClientScript ID="cscrCodigo">
-		function codigo()
+		function codigo(response)
 		{
+			document.getElementById('ctl0_Main_hidMail').value = response.email;
 		}
 	</com:TClientScript>
 </com:TContent>
@@ -17,5 +18,37 @@
 		Recibo regalo de:
 		<br/><br/>
 		<com:TDataGrid ID="dgRecibir" GridLines="Both"/>
+		<br/><br/>
+		<table width="100%" border="0">
+			<tr>
+				<td colspan="1" align="Right">Código de rastreo:</td>
+				<td colspan="1">
+					<com:TTextBox ID="txtRastreo" MaxLength="50" CausesValidation="False" />
+					<!-- com:TRequiredFieldValidator ControlToValidate="txtRastreo" 
+							ErrorMessage="Escriba su código de rastreo" Text="*" / -->
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="Right">Foto del regalo:</td>
+				<td colspan="1">
+					<com:TFileUpload ID="uplFoto" OnFileUpload="fileUploaded" />
+					<!-- com:TRequiredFieldValidator ControlToValidate="uplFoto" 
+							ErrorMessage="Seleccione una foto" Text="*" / -->
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="Right">Foto actual del regalo:</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<com:TImage ID="imgFoto" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><com:TButton ID="btnGuardar" Text="Guardar" OnClick="btnGuardar_Click" /></td>
+			</tr>
+		</table>
 	</div>
+	<com:TActiveHiddenField ID="hidFacebook" />
+	<com:TActiveHiddenField ID="hidMail" />
 </com:TContent>
