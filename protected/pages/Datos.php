@@ -57,10 +57,10 @@ class Datos extends TPage
 			"sugerencias"=>$this->txtSugerencia->Text
 		);
         if($this->uplFoto->HasFile)
-		$parametros = array_merge(
-			$parametros,
-			array("foto"=>$this->uplFoto->FileName)
-		);
+			$parametros = array_merge(
+				$parametros,
+				array("foto"=>$this->uplFoto->FileName)
+			);
 		$busqueda = array(
 			"codigo"=>$this->codigo
 		);
