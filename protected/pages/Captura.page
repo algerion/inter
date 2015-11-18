@@ -1,7 +1,7 @@
 <%@ MasterClass="Application.layouts.MainLayout" Title="Intercambio de regalos" %>
 <com:TContent ID="Cabeceras">
 	<com:TClientScript ID="cscrCodigo">
-		function codigo()
+		function codigo(response)
 		{
 			var request = <%= $this->cbCodigo->ActiveControl->Javascript %>;
 			request.dispatch();

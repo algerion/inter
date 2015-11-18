@@ -19,7 +19,8 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
 	FB.init({
-		appId      : '751988108262418',
+//		appId      : '751988108262418', //real
+		appId      : '755545087906720', //prueba
 		cookie     : true,  
 		xfbml      : true,
 		version    : 'v2.5'
@@ -43,7 +44,7 @@ function testAPI() {
 		console.log(JSON.stringify(response));
 //		document.getElementById('ctl0_Main_txtNombre').value = response.name;
 		document.getElementById('ctl0_Main_hidFacebook').value = response.id;
-		codigo();
+		codigo(response);
 //	alert(document.getElementById("ctl0_Main_hidFacebook").value);
 /*		if(response.email != undefined)
 			document.getElementById('ctl0_Main_txtCorreo').value = response.email;

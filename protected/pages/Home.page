@@ -2,7 +2,7 @@
 <com:TContent ID="Cabeceras">
 	<link rel="stylesheet" href="../compartidos/css/ajusteimg.css" media="all" />
 	<com:TClientScript ID="cscrCodigo">
-		function codigo()
+		function codigo(response)
 		{
 			var request = <%= $this->cbCodigo->ActiveControl->Javascript %>;
 			request.dispatch();
