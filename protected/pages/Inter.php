@@ -22,8 +22,9 @@ class Inter extends TPage
 		{
 			$this->grids(">");
 			$this->grids("<");
-			$this->txtRastreo->Text = $result[0]["cod_rastreo"];
 			$this->imgFoto->ImageUrl = "regalos/" . $this->codigo . $result[0]["regalo"];
+			if($this->txtRastreo->Text == "")
+				$this->txtRastreo->Text = $result[0]["cod_rastreo"];
 		}
 	}
 	
